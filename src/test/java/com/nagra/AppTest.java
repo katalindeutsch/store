@@ -1,20 +1,14 @@
 package com.nagra;
 
-import static org.junit.Assert.assertTrue;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
 
-import org.junit.Test;
+@RunWith(Cucumber.class)
+@CucumberOptions(features = {"src\\test\\java\\com\\nagra\\testcases"}
 
-/**
- * Unit test for simple App.
- */
+                    ,plugin = {"pretty", "html:target/cucumber"})
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+
 }
