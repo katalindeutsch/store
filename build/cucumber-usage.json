@@ -1,0 +1,56 @@
+[
+  {
+    "source": "^an empty basket$",
+    "steps": [
+      {
+        "name": "an empty basket",
+        "aggregatedDurations": {
+          "median": 0.001993,
+          "average": 0.001993
+        },
+        "durations": [
+          {
+            "duration": 0.001993,
+            "location": "classpath:com/nagra/ItemTesting.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the customer adds a new item to the basket$",
+    "steps": [
+      {
+        "name": "the customer adds a new item to the basket",
+        "aggregatedDurations": {
+          "median": 0.0019944,
+          "average": 0.0019944
+        },
+        "durations": [
+          {
+            "duration": 0.0019944,
+            "location": "classpath:com/nagra/ItemTesting.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the total price changes$",
+    "steps": [
+      {
+        "name": "the total price changes",
+        "aggregatedDurations": {
+          "median": 0.0019921,
+          "average": 0.0019921
+        },
+        "durations": [
+          {
+            "duration": 0.0019921,
+            "location": "classpath:com/nagra/ItemTesting.feature:6"
+          }
+        ]
+      }
+    ]
+  }
+]

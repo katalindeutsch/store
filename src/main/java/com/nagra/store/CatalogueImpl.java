@@ -3,15 +3,15 @@ package com.nagra.store;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class CatalogueImpl implements Catalogue{
+public class CatalogueImpl implements Catalogue {
     private final Map<Item, Integer> catalogue = new ConcurrentHashMap<>();
 
     @Override
     public int addItem(Item item, int count) {
         int tempCount = count;
 
-        if(catalogue.containsKey(item)) {
-            tempCount += catalogue.get(item)+count;
+        if (catalogue.containsKey(item)) {
+            tempCount += catalogue.get(item) + count;
         }
 
         catalogue.put(item, tempCount);
@@ -21,11 +21,11 @@ public class CatalogueImpl implements Catalogue{
 
     @Override
     public boolean removeItem(Item item) {
-        if(!catalogue.containsKey(item)) {
+        if (!catalogue.containsKey(item)) {
             return false;
         }
 
-        int count = catalogue.get(item)-1;
+        int count = catalogue.get(item) - 1;
         catalogue.put(item, count);
 
         return true;
@@ -33,7 +33,7 @@ public class CatalogueImpl implements Catalogue{
 
     @Override
     public int countItem(Item item) {
-        if(!catalogue.containsKey(item)) {
+        if (!catalogue.containsKey(item)) {
             return 0;
         }
 

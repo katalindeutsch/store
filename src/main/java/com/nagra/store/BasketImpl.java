@@ -3,7 +3,7 @@ package com.nagra.store;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BasketImpl implements Basket{
+public class BasketImpl implements Basket {
 
     private final Map<Item, Integer> cart = new HashMap<>();
 
@@ -11,8 +11,8 @@ public class BasketImpl implements Basket{
     public int addItem(Item item) {
         int count = 1;
 
-        if(cart.containsKey(item)){
-            count = cart.get(item)+1;
+        if (cart.containsKey(item)) {
+            count = cart.get(item) + 1;
         }
 
         cart.put(item, count);
@@ -22,11 +22,11 @@ public class BasketImpl implements Basket{
 
     @Override
     public boolean removeItem(Item item) {
-        if(!cart.containsKey(item)){
+        if (!cart.containsKey(item)) {
             return false;
         }
 
-        int count = cart.get(item)-1;
+        int count = cart.get(item) - 1;
         cart.put(item, count);
 
         return true;
@@ -36,7 +36,7 @@ public class BasketImpl implements Basket{
     public int getPrice() {
         int totalPrice = 0;
 
-        for(Map.Entry<Item, Integer> entry : cart.entrySet()) {
+        for (Map.Entry<Item, Integer> entry : cart.entrySet()) {
             Item item = entry.getKey();
             int count = entry.getValue();
 
